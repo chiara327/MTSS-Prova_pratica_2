@@ -6,7 +6,7 @@
 <module name="Checker">
     <module name="FileLength"/>
     <module name="LineLength"/>
-    <module name="FileTabCharacter">
+    <module name="FileTabCharacter"/>
     <module name="Header">
         <property name="headerFile" value="LICENSE.txt"/>
         <property name="fileExtensions" value="java, txt"/>
@@ -15,7 +15,7 @@
   <module name="TreeWalker">
     <module name="BooleanExpressionComplexity"/>
     <module name="CyclomaticComplexity"/>
-    <module name="MethodLength">
+    <module name="MethodLength"/>
     <module name="EmptyCatchBlock"/>
     <module name="AvoidStarImport"/>
     <module name="IllegalImport"/>
