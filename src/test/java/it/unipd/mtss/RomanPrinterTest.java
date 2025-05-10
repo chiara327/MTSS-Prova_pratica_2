@@ -9,23 +9,24 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+
 public class RomanPrinterTest {
 
     @Test
         public void ShouldInstantiateRomanPrinter(){
             new RomanPrinter();
             assertTrue(true);
-        }
+        }    
 
     @Test
-        public void testIllegalArgumentException() {
-            assertThrows(IllegalArgumentException.class,
-            () -> RomanPrinter.print(0));
-            assertThrows(IllegalArgumentException.class,
-            () -> RomanPrinter.print(1001));
-            assertThrows(IllegalArgumentException.class,
-            () -> RomanPrinter.print(-1));
-        }
+    public void testIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class,
+         () -> RomanPrinter.print(0));
+        assertThrows(IllegalArgumentException.class,
+         () -> RomanPrinter.print(1001));
+        assertThrows(IllegalArgumentException.class,
+         () -> RomanPrinter.print(-1));
+    }
 
     @Test
     public void ShouldPrintI(){
@@ -286,5 +287,53 @@ public class RomanPrinterTest {
                      " | |     \n"+
                      " | |____ \n"+
                      "  \\_____|\n", ascii);
+    }
+
+    @Test
+    public void ShouldPrintCC(){
+        int numero = 200;
+        String ascii =  RomanPrinter.print(numero);
+        assertEquals("   _____    _____ \n"+
+                     "  / ____|  / ____|\n"+
+                     " | |      | |     \n"+
+                     " | |      | |     \n"+
+                     " | |____  | |____ \n"+
+                     "  \\_____|  \\_____|\n", ascii);
+    }
+
+    @Test
+    public void ShouldPrintCCC(){
+        int numero = 300;
+        String ascii =  RomanPrinter.print(numero);
+        assertEquals("   _____    _____    _____ \n"+
+                     "  / ____|  / ____|  / ____|\n"+
+                     " | |      | |      | |     \n"+
+                     " | |      | |      | |     \n"+
+                     " | |____  | |____  | |____ \n"+
+                     "  \\_____|  \\_____|  \\_____|\n", ascii);
+    }
+
+    @Test
+    public void ShouldPrintCD(){
+        int numero = 400;
+        String ascii =  RomanPrinter.print(numero);
+        assertEquals("   _____   _____  \n"+
+                     "  / ____| |  __ \\ \n"+
+                     " | |      | |  | |\n"+
+                     " | |      | |  | |\n"+
+                     " | |____  | |__| |\n"+
+                     "  \\_____| |_____/ \n", ascii);
+    }
+
+    @Test
+    public void ShouldPrintD(){
+        int numero = 500;
+        String ascii =  RomanPrinter.print(numero);
+        assertEquals("  _____  \n"+
+                     " |  __ \\ \n"+
+                     " | |  | |\n"+
+                     " | |  | |\n"+
+                     " | |__| |\n"+
+                     " |_____/ \n", ascii);
     }
 }
