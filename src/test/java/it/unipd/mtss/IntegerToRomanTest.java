@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+
 public class IntegerToRomanTest {
 
     @Test
@@ -67,5 +68,33 @@ public class IntegerToRomanTest {
         int numero = 6;
         String romano = IntegerToRoman.convert(numero);
         assertEquals("VI", romano);
+	}
+
+    @Test
+	public void ShouldConvertToVII() {
+        int numero = 7;
+        String romano = IntegerToRoman.convert(numero);
+        assertEquals("VII", romano);
+	}
+
+    @Test
+	public void ShouldConvertToVIII() {
+        int numero = 8;
+        String romano = IntegerToRoman.convert(numero);
+        assertEquals("VIII", romano);
+	}
+
+    @Test
+	public void ShouldConvertToIX() {
+        int numero = 9;
+        String romano = IntegerToRoman.convert(numero);
+        assertEquals("IX", romano);
+	}
+
+    @Test
+	public void ShouldConvertToX() {
+        int numero = 10;
+        String romano = IntegerToRoman.convert(numero);
+        assertEquals("X", romano);
 	}
 }

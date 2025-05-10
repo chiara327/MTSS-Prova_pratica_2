@@ -103,4 +103,56 @@ public class RomanPrinterTest {
                      "     \\/     |_____|\n", ascii);
         
     }
+
+    @Test
+    public void ShouldPrintVII(){
+        int numero =7;
+        String ascii=RomanPrinter.print(numero);
+        assertEquals(" __      __  _____   _____ \n"+
+                     " \\ \\    / / |_   _| |_   _|\n"+
+                     "  \\ \\  / /    | |     | |  \n"+
+                     "   \\ \\/ /     | |     | |  \n"+
+                     "    \\  /     _| |_   _| |_ \n"+
+                     "     \\/     |_____| |_____|\n", ascii);
+        
+    }
+
+    @Test
+    public void ShouldPrintVIII(){
+        int numero =8;
+        String ascii=RomanPrinter.print(numero);
+        assertEquals(" __      __  _____   _____   _____ \n"+
+                     " \\ \\    / / |_   _| |_   _| |_   _|\n"+
+                     "  \\ \\  / /    | |     | |     | |  \n"+
+                     "   \\ \\/ /     | |     | |     | |  \n"+
+                     "    \\  /     _| |_   _| |_   _| |_ \n"+
+                     "     \\/     |_____| |_____| |_____|\n", ascii);
+        
+    }
+
+    @Test
+    public void ShouldPrintIX(){
+        int numero =9;
+        String ascii=RomanPrinter.print(numero);
+        assertEquals("  _____  __   __\n"+
+                     " |_   _| \\ \\ / /\n"+
+                     "   | |    \\ V / \n"+
+                     "   | |     > <  \n"+
+                     "  _| |_   / . \\ \n"+
+                     " |_____| /_/ \\_\\\n", ascii);
+        
+    }
+
+    @Test
+    public void ShouldPrintX(){
+        int numero = 10;
+        String ascii=RomanPrinter.print(numero);
+        assertEquals(" __   __\n"+
+                     " \\ \\ / /\n"+
+                     "  \\ V / \n"+
+                     "   > <  \n"+
+                     "  / . \\ \n"+
+                     " /_/ \\_\\\n", ascii);
+        
+    }
 }
