@@ -155,4 +155,40 @@ public class RomanPrinterTest {
                      " /_/ \\_\\\n", ascii);
         
     }
+
+    @Test 
+        public void ShouldPrintXV(){
+        int numero = 15;
+        String ascii =  RomanPrinter.print(numero);
+        assertEquals(" __   __ __      __\n"+
+                     " \\ \\ / / \\ \\    / /\n"+
+                     "  \\ V /   \\ \\  / / \n"+
+                     "   > <     \\ \\/ /  \n"+
+                     "  / . \\     \\  /   \n"+
+                     " /_/ \\_\\     \\/    \n", ascii);
+    }
+
+    @Test 
+        public void ShouldPrintXIX(){
+        int numero = 19;
+        String ascii =  RomanPrinter.print(numero);
+        assertEquals(" __   __  _____  __   __\n"+
+                     " \\ \\ / / |_   _| \\ \\ / /\n"+
+                     "  \\ V /    | |    \\ V / \n"+
+                     "   > <     | |     > <  \n"+
+                     "  / . \\   _| |_   / . \\ \n"+
+                     " /_/ \\_\\ |_____| /_/ \\_\\\n", ascii);
+    }
+
+    @Test 
+        public void ShouldPrintXX(){
+        int numero = 20;
+        String ascii =  RomanPrinter.print(numero);
+        assertEquals(" __   __ __   __\n"+
+                     " \\ \\ / / \\ \\ / /\n"+
+                     "  \\ V /   \\ V / \n"+
+                     "   > <     > <  \n"+
+                     "  / . \\   / . \\ \n"+
+                     " /_/ \\_\\ /_/ \\_\\\n", ascii);
+    }
 }
