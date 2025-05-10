@@ -24,35 +24,35 @@ public class RomanPrinterTest {
 	public void ShouldPrintI() {
         int numero = 1;
         String ascii = RomanPrinter.print(numero);
-        assertEquals(" _____ " + "\n" 
-                   + " |_ _| " + "\n"
-                   + "  | |  " + "\n" 
-                   + "  | |  " + "\n" 
-                   + " _| |_ " + "\n" 
-                   + "|_____|", ascii);
+        assertEquals("  _____ \n"+
+                     " |_   _|\n"+
+                     "   | |  \n"+
+                     "   | |  \n"
+                     "  _| |_ \n"+
+                     " |_____|\n", ascii);
 	}
 
     @Test
 	public void ShouldPrintII() {
         int numero = 2;
         String ascii = RomanPrinter.print(numero);
-        assertEquals(" _____  _____ " + "\n" 
-                   + " |_ _|  |_ _| " + "\n"
-                   + "  | |    | |  " + "\n" 
-                   + "  | |    | |  " + "\n" 
-                   + " _| |_  _| |_ " + "\n" 
-                   + "|_____||_____|", ascii);
+        assertEquals("  _____   _____ \n"+
+                     " |_   _| |_   _|\n"+
+                     "   | |     | |  \n"
+                     "   | |     | |  \n"+
+                     "  _| |_   _| |_ \n"+
+                     " |_____| |_____|\n", result);
 	}
 
     @Test
 	public void ShouldPrintIII() {
         int numero = 3;
         String ascii = RomanPrinter.print(numero);
-        assertEquals(" _____  _____  _____ " + "\n" 
-                   + " |_ _|  |_ _|  |_ _| " + "\n"
-                   + "  | |    | |    | |  " + "\n" 
-                   + "  | |    | |    | |  " + "\n" 
-                   + " _| |_  _| |_  _| |_ " + "\n" 
-                   + "|_____||_____||_____|", ascii);
+    assertEquals("  _____   _____   _____ \n"+
+                 " |_   _| |_   _| |_   _|\n"+
+                 "   | |     | |     | |  \n"+
+                 "   | |     | |     | |  \n"+
+                 "  _| |_   _| |_   _| |_ \n"+
+                 " |_____| |_____| |_____|\n", result);
 	}
 }
