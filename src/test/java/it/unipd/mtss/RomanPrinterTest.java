@@ -227,4 +227,64 @@ public class RomanPrinterTest {
                      " | |____ \n"+
                      " |______|\n", ascii);
     }
+
+    @Test
+    public void ShouldPrintLX(){
+        int numero = 60;
+        String ascii =  RomanPrinter.print(numero);
+        assertEquals("  _       __   __\n"+
+                     " | |      \\ \\ / /\n"+
+                     " | |       \\ V / \n"+
+                     " | |        > <  \n"+
+                     " | |____   / . \\ \n"+
+                     " |______| /_/ \\_\\\n", ascii);
+    }
+
+    @Test
+    public void ShouldPrintLXX(){
+        int numero = 70;
+        String ascii =  RomanPrinter.print(numero);
+        assertEquals("  _       __   __ __   __\n"+
+                     " | |      \\ \\ / / \\ \\ / /\n"+
+                     " | |       \\ V /   \\ V / \n"+
+                     " | |        > <     > <  \n"+
+                     " | |____   / . \\   / . \\ \n"+
+                     " |______| /_/ \\_\\ /_/ \\_\\\n", ascii);
+    }
+
+    @Test
+    public void ShouldPrintLXXX(){
+        int numero = 80;
+        String ascii =  RomanPrinter.print(numero);
+        assertEquals("  _       __   __ __   __ __   __\n"+
+                     " | |      \\ \\ / / \\ \\ / / \\ \\ / /\n"+
+                     " | |       \\ V /   \\ V /   \\ V / \n"+
+                     " | |        > <     > <     > <  \n"+
+                     " | |____   / . \\   / . \\   / . \\ \n"+
+                     " |______| /_/ \\_\\ /_/ \\_\\ /_/ \\_\\\n", ascii);
+    }
+
+    @Test
+    public void ShouldPrintXC(){
+        int numero = 90;
+        String ascii =  RomanPrinter.print(numero);
+        assertEquals(" __   __   _____ \n"+
+                     " \\ \\ / /  / ____|\n"+
+                     "  \\ V /  | |     \n"+
+                     "   > <   | |     \n"+
+                     "  / . \\  | |____ \n"+
+                     " /_/ \\_\\  \\_____|\n", ascii);
+    }
+
+    @Test
+    public void ShouldPrintC(){
+        int numero = 100;
+        String ascii =  RomanPrinter.print(numero);
+        assertEquals("   _____ \n"+
+                     "  / ____|\n"+
+                     " | |     \n"+
+                     " | |     \n"+
+                     " | |____ \n"+
+                     "  \\_____|\n", ascii);
+    }
 }

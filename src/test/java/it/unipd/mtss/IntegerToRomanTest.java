@@ -138,4 +138,39 @@ public class IntegerToRomanTest {
         String romano = IntegerToRoman.convert(numero);
         assertEquals("L", romano);
 	}
+
+    @Test
+	public void ShouldConvertToLX() {
+        int numero = 60;
+        String romano = IntegerToRoman.convert(numero);
+        assertEquals("LX", romano);
+	}
+
+    @Test
+	public void ShouldConvertToLXX() {
+        int numero = 70;
+        String romano = IntegerToRoman.convert(numero);
+        assertEquals("LXX", romano);
+	}
+
+    @Test
+	public void ShouldConvertToLXXX() {
+        int numero = 80;
+        String romano = IntegerToRoman.convert(numero);
+        assertEquals("LXXX", romano);
+	}
+
+    @Test
+	public void ShouldConvertToXC() {
+        int numero = 90;
+        String romano = IntegerToRoman.convert(numero);
+        assertEquals("XC", romano);
+	}
+
+    @Test
+	public void ShouldConvertToC() {
+        int numero = 100;
+        String romano = IntegerToRoman.convert(numero);
+        assertEquals("C", romano);
+	}
 }
