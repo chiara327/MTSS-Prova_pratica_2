@@ -8,13 +8,14 @@ package it.unipd.mtss;
 public class IntegerToRoman {
     public static String convert (int number){
 
-        if (number < 1 || number > 10) {
+        if (number < 1 || number > 20) {
             throw new IllegalArgumentException(number + 
-            "non è un numero valido perché non compreso fra 1 e 10.");
+            " non é un numero valido perché non compreso fra 1 e 20.");
         }
 
         String[] romanLetters = {"X", "IX", "V", "IV", "I"};
         int[] values = {10, 9, 5, 4, 1};
+
 
         StringBuilder romanNumber = new StringBuilder();
 

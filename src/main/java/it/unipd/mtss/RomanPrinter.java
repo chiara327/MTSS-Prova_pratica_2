@@ -11,6 +11,7 @@ public class RomanPrinter {
     private static String printAsciiArt(String romanNumber){
         StringBuilder asciiArt = new StringBuilder();
     
+
         String[][] asciiLetters = {
             {
                 " __   __",  // X
