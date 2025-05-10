@@ -27,7 +27,7 @@ public class RomanPrinterTest {
         assertEquals("  _____ \n"+
                      " |_   _|\n"+
                      "   | |  \n"+
-                     "   | |  \n"
+                     "   | |  \n"+
                      "  _| |_ \n"+
                      " |_____|\n", ascii);
 	}
@@ -38,7 +38,7 @@ public class RomanPrinterTest {
         String ascii = RomanPrinter.print(numero);
         assertEquals("  _____   _____ \n"+
                      " |_   _| |_   _|\n"+
-                     "   | |     | |  \n"
+                     "   | |     | |  \n"+
                      "   | |     | |  \n"+
                      "  _| |_   _| |_ \n"+
                      " |_____| |_____|\n", result);
