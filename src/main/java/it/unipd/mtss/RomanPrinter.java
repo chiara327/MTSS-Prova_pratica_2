@@ -14,6 +14,7 @@ public class RomanPrinter {
 
         String[][] asciiLetters = {
             {
+                "  _      ",  // L
                 " __   __",  // X
                 " __      __",  // V
                 "  _____ " // I
@@ -21,30 +22,35 @@ public class RomanPrinter {
 
 
             {
+                " | |     ",  // L
                 " \\ \\ / /",  // X
                 " \\ \\    / /",  // V
                 " |_   _|" // I
             },
 
             {
+                " | |     ",  // L
                 "  \\ V / ",  // X
                 "  \\ \\  / / ",  // V
                 "   | |  " // I
             },
 
             {
+                " | |     ", // L
                 "   > <  ", // X
                 "   \\ \\/ /  ", // V
                 "   | |  " // I
             },
                 
             {
+                " | |____ ", // L
                 "  / . \\ ", // X
                 "    \\  /   ", // V
                 "  _| |_ " // I
             },
                 
             {
+                " |______|", // L
                 " /_/ \\_\\", // X
                 "     \\/    ", // V
                 " |_____|" // I
@@ -52,7 +58,7 @@ public class RomanPrinter {
         };
         for( int z=0; z<6; z++) {
             for (char c : romanNumber.toCharArray()) {
-                asciiArt.append(asciiLetters[z]["XVI".indexOf(c)]);
+                asciiArt.append(asciiLetters[z]["LXVI".indexOf(c)]);
             }
             asciiArt.append("\n");
         }
