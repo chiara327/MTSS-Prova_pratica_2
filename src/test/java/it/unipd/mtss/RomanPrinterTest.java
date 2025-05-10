@@ -41,7 +41,7 @@ public class RomanPrinterTest {
                      "   | |     | |  \n"+
                      "   | |     | |  \n"+
                      "  _| |_   _| |_ \n"+
-                     " |_____| |_____|\n", result);
+                     " |_____| |_____|\n", ascii);
 	}
 
     @Test
@@ -53,6 +53,6 @@ public class RomanPrinterTest {
                  "   | |     | |     | |  \n"+
                  "   | |     | |     | |  \n"+
                  "  _| |_   _| |_   _| |_ \n"+
-                 " |_____| |_____| |_____|\n", result);
+                 " |_____| |_____| |_____|\n", ascii);
 	}
 }
