@@ -11,9 +11,9 @@ public class RomanPrinter {
     private static String printAsciiArt(String romanNumber){
         StringBuilder asciiArt = new StringBuilder();
     
-
         String[][] asciiLetters = {
             {
+                "  __  __ ", // M
                 "  _____  ",  // D
                 "   _____ ",  // C
                 "  _      ",  // L
@@ -23,7 +23,8 @@ public class RomanPrinter {
             },
 
 
-            {
+            {   
+                " |  \\/  |", // M
                 " |  __ \\ ",  // D
                 "  / ____|",  // C
                 " | |     ",  // L
@@ -32,7 +33,8 @@ public class RomanPrinter {
                 " |_   _|" // I
             },
 
-            {
+            {   
+                " | \\  / |", // M
                 " | |  | |",  // D
                 " | |     ",  // C
                 " | |     ",  // L
@@ -41,7 +43,8 @@ public class RomanPrinter {
                 "   | |  " // I
             },
 
-            {
+            {   
+                " | |\\/| |", // M
                 " | |  | |", // D
                 " | |     ", // C
                 " | |     ", // L
@@ -51,6 +54,7 @@ public class RomanPrinter {
             },
                 
             {
+                " | |  | |", // M
                 " | |__| |", // D
                 " | |____ ", // C
                 " | |____ ", // L
@@ -60,6 +64,7 @@ public class RomanPrinter {
             },
                 
             {
+                " |_|  |_|", // M
                 " |_____/ ", // D
                 "  \\_____|", // C
                 " |______|", // L
@@ -70,7 +75,7 @@ public class RomanPrinter {
         };
         for( int z=0; z<6; z++) {
             for (char c : romanNumber.toCharArray()) {
-                asciiArt.append(asciiLetters[z]["DCLXVI".indexOf(c)]);
+                asciiArt.append(asciiLetters[z]["MDCLXVI".indexOf(c)]);
             }
             asciiArt.append("\n");
         }
