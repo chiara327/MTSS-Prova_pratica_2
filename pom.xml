@@ -80,6 +80,7 @@
           </execution>
           <execution>
             <id>default-check</id>
+            <!--di default in verify-->
             <goals>
               <goal>check</goal>
             </goals>
@@ -110,6 +111,14 @@
             <jacocoReport>target/site/jacoco/jacoco.xml</jacocoReport>
           </jacocoReports>
         </configuration>
+        <executions>
+          <execution>
+            <phase>verify</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
     </build>
