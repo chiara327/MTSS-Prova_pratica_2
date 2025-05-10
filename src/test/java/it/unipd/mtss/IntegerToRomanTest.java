@@ -7,8 +7,15 @@ package it.unipd.mtss;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class IntegerToRomanTest {
+
+    @Test
+        public void ShouldInstantiateIntegerToRoman(){
+            new IntegerToRoman();
+            assertTrue(true);
+        }
 
     @Test
     public void testIllegalArgumentException() {
@@ -39,5 +46,26 @@ public class IntegerToRomanTest {
         int numero = 3;
         String romano = IntegerToRoman.convert(numero);
         assertEquals("III", romano);
+	}
+
+    @Test
+	public void ShouldConvertToIV() {
+        int numero = 4;
+        String romano = IntegerToRoman.convert(numero);
+        assertEquals("IV", romano);
+	}
+
+    @Test
+	public void ShouldConvertToV() {
+        int numero = 5;
+        String romano = IntegerToRoman.convert(numero);
+        assertEquals("V", romano);
+	}
+
+    @Test
+	public void ShouldConvertToVI() {
+        int numero = 6;
+        String romano = IntegerToRoman.convert(numero);
+        assertEquals("VI", romano);
 	}
 }
